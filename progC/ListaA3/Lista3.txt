@@ -1,0 +1,365 @@
+Exercicio_1
+===========================
+#include<stdio.h>
+
+void main(){
+
+    int x,y, resultado, maior, menor;
+
+    printf("Digite o primeiro numero: ");
+    scanf("%d", &x);
+
+    printf("Digite o segundo numero: ");
+    scanf("%d", &y);
+
+    if(x > y){
+        maior = x;
+        menor = y;
+    }
+    else{
+        maior = y;
+        menor = x;   
+    }
+
+    resultado = maior - menor;
+    printf("O resultado da diferença entre %d - %d = %d", maior, menor, resultado );
+}
+===========================
+Exercicio_2
+===========================
+#include<stdio.h>
+
+void main(){
+
+    float x, y, z;
+
+    printf("Digite o primeiro numero: ");
+    scanf("%f", &x);
+
+    printf("Digite o segundo numero: ");
+    scanf("%f", &y);
+
+    printf("Digite o terceiro numero: ");
+    scanf("%f", &z);
+
+    if((x < y) && (x < z)){
+        if(y < z){
+            printf("A ordem crescente sera: %f, %f, %f", x, y, z);
+        }
+        else{
+           printf("A ordem crescente sera: %f, %f, %f", x, z, y); 
+        }
+    }
+    else{
+        if((y < x) && (y < z)){
+            if(x < z){
+               printf("A ordem crescente sera: %f, %f, %f", y, x, z); 
+            }
+            else{
+                printf("A ordem crescente sera: %f, %f, %f", y, z, x);
+            }
+        }
+        else{
+            if((z < x) && (z < y)){
+                if(x < y){
+                    printf("A ordem crescente sera: %f, %f, %f", z, x, y);
+                }
+                else{
+                    printf("A ordem crescente sera: %f, %f, %f", z, y, x);
+                }
+            }
+        }
+    }
+} 
+===========================
+Exercicio_3
+===========================
+#include<stdio.h>
+
+void main(){
+
+    int x, resp;
+
+    printf("Digite o numero para saber o modulo: ");
+    scanf("%d", &x);
+
+    if(x > 0){
+        resp = x;
+    }
+    else{
+        resp = x * -1;
+    }
+
+    printf("O modulo de %d sera %d", x, resp);
+} 
+===========================
+Exercicio_4
+===========================
+#include<stdio.h>
+
+void main(){
+
+    float x, y, maior;
+
+    printf("Digite o primeiro numero: ");
+    scanf("%f", &x);
+
+    printf("Digite o segundo numero: ");
+    scanf("%f", &y);
+
+    if(x > y){
+        maior = x;
+    }
+    else{
+        maior = y;
+    }
+
+    printf("O maior numero entre %.2f e %.2f : %.2f", x, y, maior);
+} 
+===========================
+Exercicio_5
+===========================
+#include<stdio.h>
+#include<math.h>
+
+void main(){
+
+    float a, b, c, delta, x1, x2;
+
+    printf("Digite o valor para A: ");
+    scanf("%f", &a);
+
+    printf("Digite o valor para B: ");
+    scanf("%f", &b);
+
+    printf("Digite o valor para C: ");
+    scanf("%f", &c);
+
+    delta = (b * b - 4 * a * c);
+
+    if(delta < 0){
+        printf("Nao existem raizes reais para esta equacao!!");
+    }
+    else{
+        x1 = (-b + sqrt(delta)) / (2 * a);
+        x2 = (-b - sqrt(delta)) / (2 * a);
+
+        prinff("As raizes para equacao sera: x1 = %.2f e x2 = %.2f", x1, x2);
+    }
+
+} 
+===========================
+Exercicio_6
+===========================
+#include<stdio.h>
+
+void main(){
+
+    float n1, n2, n3, n4, media;
+
+    printf("Digite a nota 1: ");
+    scanf("%f", &n1);
+
+    printf("Digite a nota 2: ");
+    scanf("%f", &n2);
+
+    printf("Digite a nota 3: ");
+    scanf("%f", &n3);
+
+    printf("Digite a nota 4: ");
+    scanf("%f", &n4);
+
+    media = (n1 + n2 + n3 + n4) / 4;
+
+    if(media >= 5.0){
+        printf("Aluno aprovado com media = %.2f", media);
+    }
+    else{
+        printf("Aluno reprovado com media = %.2f", media);     
+    }    
+} 
+===========================
+Exercicio_7
+===========================
+#include<stdio.h>
+
+void main(){
+
+    
+} 
+===========================
+Exercicio_8
+===========================
+#include<stdio.h>
+
+void main(){
+
+    int x, teste1, teste2;
+
+    printf("Digite o numero de teste: ");
+    scanf("%d", &x);
+
+    teste1 = x % 2;
+    teste2 = x % 3;
+
+    if((teste1 == 0) && (teste2 == 0)){
+        printf("O numero %d e divisivel por 2 e por 3 ao mesmo tempo.", x);
+    }
+    else{
+        printf("O numero %d nao e divisivel por 2 e por 3 aos mesmo tempo.", x);
+    }
+} 
+===========================
+Exercicio_9
+===========================
+#include<stdio.h>
+
+void main(){
+
+    float peso, altura;
+    char sexo;
+
+    printf("Informe o seu sexo-> M para mulher e H para homem: ");
+    scanf("%c", &sexo);
+
+    printf("Digite sua altura em metros (ex: 1.72): ");
+    scanf("%f", &altura);
+
+    if((sexo != 'M') && (sexo != 'm') && (sexo != 'H') && (sexo != 'h')){
+        printf("O sexo informado nao corresponde a uma opcao valida!\n");
+    }
+    else{
+        if((sexo == 'M') || (sexo == 'm')){
+            peso = (62.1 * altura) - 44.7;
+        }
+        else{
+            peso = (72.7 * altura) - 58;            
+        }
+        printf("O peso ideal para voce: %2.f Kg por ser do sexo %c e com altura de %.2f\n", peso, sexo, altura);
+    }
+} 
+===========================
+Exercicio_10
+===========================
+#include<stdio.h>
+
+void main(){
+
+    int ano_nasc, idade,ano_atual;
+
+    printf("Informe o ano de seu nascimento (aaaa): ");
+    scanf("%d", &ano_nasc);
+    printf("Informe o ano atual (aaaa): ");
+    scanf("%d", &ano_atual);
+
+    idade = (ano_atual - ano_nasc);
+
+    if(idade >= 18){
+        printf("Com %d anos, voce e maior de idade.\n", idade);
+    }
+    else{
+        printf("Com %d anos, voce e menor de idade.\n", idade);
+    }
+} 
+===========================
+Exercicio_11
+===========================
+#include<stdio.h>
+
+void main(){
+
+    float v1, v2, v3, mediap;
+
+    printf("Digite o primeiro valor: ");
+    scanf("%f", &v1);
+
+    printf("Digite o segundo valor: ");
+    scanf("%f", &v2);
+
+    printf("Digite o terceiro valor: ");
+    scanf("%f", &v3);
+
+    mediap = (v1 * 0.2) + (v2 * 0.3) + (v3 *0.5);
+
+    printf("O valor da media ponderada será: %.2f\n", mediap);
+}
+===========================
+Exercicio_12
+===========================
+#include<stdio.h>
+
+void main(){
+
+    float preco_a, preco_n;
+    int qtprod;
+
+    printf("Informe a quantidade media de venda mensal do produto: ");
+    scanf("%d", &qtprod);
+
+    printf("Informe o preco atual do produto: R$ ");
+    scanf("%f", &preco_a);
+
+    if((qtprod < 500) && (preco_a < 30.0)){
+        preco_n = preco_a * 1.1;
+    }
+    else{
+        if((qtprod >= 1000) && (preco_a >= 80.0)){
+            preco_n = preco_a * 0.95;
+        }
+        else{
+            preco_n = preco_a * 1.15;
+        }
+    }
+
+    printf("O novo preco do produto será: R$ %.2f", preco_n);
+} 
+===========================
+Exercicio_13
+===========================
+#include<stdio.h>
+
+void main(){
+
+    float sal_atual, sal_novo, sal_aumento;
+
+    printf("Informe seu salario atual: R$ ");
+    scanf("%f", &sal_atual);
+
+    if(sal_atual < 500.0){
+        sal_aumento = sal_atual;
+    }
+    else{
+        if((sal_atual >=500.0) && (sal_atual < 1000.0)){
+            sal_aumento = sal_atual * 0.75;
+        }
+        else{
+            if((sal_atual >= 1000.0) && (sal_atual < 1500.0)){
+                sal_aumento = sal_atual * 0.50;
+            }
+            else{
+                if((sal_atual >= 1500.0) && (sal_atual < 2000.0)){
+                    sal_aumento = sal_atual * 0.25;
+                }
+                else{
+                    if((sal_atual >= 2000.0) && (sal_atual < 3000.0)){
+                        sal_aumento = sal_atual * 0.10;
+                    }
+                    else{
+                        if((sal_atual >= 3000.0) && (sal_atual < 5000.00)){
+                            sal_aumento = sal_atual * 0.05;
+                        }
+                        else{
+                            sal_aumento = sal_atual * 0.02;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    sal_novo = sal_atual + sal_aumento;
+
+    printf("O funcionario teve um aumento de R$ %.2f e seu novo salario sera R$ %.2f", sal_aumento, sal_novo);
+} 
+===========================
+FIM DA LISTA
